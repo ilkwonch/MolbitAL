@@ -102,9 +102,10 @@ python utils/split_smiles.py --input total.smi \
 ```
 Optional OpenEye enumeration:
 ```bash
-./generate_isomers.sh  -i smiles/        -o smiles_isomers  -m 16 -n -b
-./generate_tautomers.sh -i smiles_isomers/ -o smiles_all     -m 16 -p -t 30.0
+./generate_isomers.sh  -i smiles/ -o smiles_isomers  -m 16 -n -b
+./generate_tautomers.sh -i smiles_isomers/ -o smiles_all -m 16 -p -t 30.0
 ```
+see the bash scripts for option in detail
 
 ### Fingerprint Generation<a id="fingerprint-generation"></a>
 ```bash
@@ -142,7 +143,7 @@ python phase_1/run_docking.py \
        --results-csv scores.csv \
        --active 
 ```
-
+For in detail description and options for unidock, please see https://github.com/dptech-corp/Uni-Dock
 Substitute `--engine` with  `vina-gpu`, `smina`, `qvina`, or `qvina-w` as needed.
 
 ### Machine‑Learning Training<a id="machine-learning-training"></a>
