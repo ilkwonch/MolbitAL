@@ -190,3 +190,6 @@ For PoseBusters:
 To additionally save the .sdf files of the generated molecules, add the flag `--save_visualisation`.
 
 Note: the notebook `data/apo_alignment.ipynb` contains the code used to align the ESMFold-generated apo-structures to the holo-structures.
+
+## License <a name="license"></a>
+The code and model weights are released under MIT license. See the [LICENSE](LICENSE) file for details.
