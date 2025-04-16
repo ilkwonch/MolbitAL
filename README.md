@@ -1,27 +1,4 @@
-<details><summary><b>Citation</b></summary>
 
-If you use this code or the models in your research, please cite the following paper:
-
-```bibtex
-    @inproceedings{corso2023diffdock,
-        title={DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking}, 
-        author = {Corso, Gabriele and Stärk, Hannes and Jing, Bowen and Barzilay, Regina and Jaakkola, Tommi},
-        booktitle={International Conference on Learning Representations (ICLR)},
-        year={2023}
-    }
-```
-
-If you use the latest version, DiffDock-L, please also cite the following paper:
-
-```bibtex
-    @inproceedings{corso2024discovery,
-        title={Deep Confident Steps to New Pockets: Strategies for Docking Generalization},
-        author={Corso, Gabriele and Deng, Arthur and Polizzi, Nicholas and Barzilay, Regina and Jaakkola, Tommi},
-        booktitle={International Conference on Learning Representations (ICLR)},
-        year={2024}
-    }
-
-```
 </details>
 
 <details open><summary><b>Table of contents</b></summary>
