@@ -1,0 +1,16 @@
+{
+    "project_name": "project_pkm2_xgbd",
+    "smiles_dir": "pkm2_split",
+    "fingerprint_dir": "pkm2_fingerprints",
+    "receptor": "3me3_protein.pdbqt",
+    "config": "pkm2_box.txt",
+    "docking_engine": "unidock",
+    "ml_model": "xgbd",
+    "acquisition": "greedy",
+    "num_compounds": 1000,
+    "start_cycle": 1,
+    "end_cycle": 10,
+    "script_dir": "/mnt/c/Users/user/Desktop/active_learner/utilities/fingerprints/DD_protocol/",
+    "max_gpu_memory": 2,
+    "workers": 8
+}

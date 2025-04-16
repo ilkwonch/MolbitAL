@@ -1,0 +1,15 @@
+{
+    "project_name": "my_docking_project",
+    "smiles_dir": "/path/to/smiles/library",
+    "fingerprint_dir": "/path/to/fingerprint/library",
+    "receptor": "/path/to/receptor/3me3_protein.pdbqt",
+    "config": "/path/to/config/pkm2_box.txt",
+    "docking_engine": "unidock",
+    "ml_model": "lgbm",
+    "num_compounds": 1000,
+    "start_cycle": 1,
+    "end_cycle": 10,
+    "script_dir": "/path/to/scripts",
+    "max_gpu_memory": 2,
+    "workers": 8
+}
