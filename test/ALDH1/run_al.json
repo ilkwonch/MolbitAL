@@ -1,0 +1,16 @@
+{
+    "project_name": "project_aldh1_xgbd",
+    "smiles_dir": "aldh1_split",
+    "fingerprint_dir": "aldh1_fingerprints",
+    "receptor": "5l2m_protein.pdbqt",
+    "config": "aldh1_box.txt",
+    "docking_engine": "unidock", 
+    "ml_model": "xgbd",
+    "acquisition": "lcb",  
+    "num_compounds": 1000,
+    "start_cycle": 1,
+    "end_cycle": 10,
+    "script_dir": "/mnt/c/Users/user/Desktop/molbital/",
+    "max_gpu_memory": 2,
+    "workers": 8
+}
