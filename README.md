@@ -76,7 +76,7 @@ Key fields in **`run_al.json`**
 | `acquisition` | `greedy`, `lcb`, or `unc` |
 | `start_cycle` / `end_cycle` | Range of AL iterations |
 | `max_gpu_memory` | (Uni‑Dock) cap GPU memory per batch |
-| `workerss` | Number of CPU workers for I/O intensive steps |
+| `workers` | Number of CPU workers for I/O intensive steps |
 | `script_dir` | Root directory that contains the `phase_*` and `utils` folders |
 
 If `start_cycle` > 1 MolbitAL automatically resumes from the previous checkpoint.
