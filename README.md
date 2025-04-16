@@ -1,21 +1,3 @@
-# DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking
-[![Open in HuggingFace](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/reginabarzilaygroup/DiffDock-Web)
-
-
-![Alt Text](overview.png)
-
-### [Original paper on arXiv](https://arxiv.org/abs/2210.01776)
-
-Implementation of DiffDock, state-of-the-art method for molecular docking, by Gabriele Corso*, Hannes Stark*, Bowen Jing*, Regina Barzilay and Tommi Jaakkola.
-This repository contains code and instructions to run the method. Since 2024, Jacob Silterra has been leading the effort to maintain and improve the code.
-If you have any question, feel free to open an issue or reach out to us: [gcorso@mit.edu](gcorso@mit.edu) and [silterra@mit.edu](silterra@mit.edu).
-
-**Update February 2024:** We have released DiffDock-L, a new version of DiffDock that provides a significant improvement in performance and generalization capacity (see the description of the new version in [our new paper](https://arxiv.org/abs/2402.18396)). By default the repository now runs the new model, please use GitHub commit history to run the original DiffDock model. Further we now provide instructions for Docker and to set up your own local UI interface.
-
-You can also try out the model on [Hugging Face Spaces](https://huggingface.co/spaces/reginabarzilaygroup/DiffDock-Web).
-
-
-
 <details><summary><b>Citation</b></summary>
 
 If you use this code or the models in your research, please cite the following paper:
@@ -208,37 +190,3 @@ For PoseBusters:
 To additionally save the .sdf files of the generated molecules, add the flag `--save_visualisation`.
 
 Note: the notebook `data/apo_alignment.ipynb` contains the code used to align the ESMFold-generated apo-structures to the holo-structures.
-
-## Citations <a name="citations"></a>
-If you use this code or the models in your research, please cite the following paper:
-
-```bibtex
-@inproceedings{corso2023diffdock,
-    title={DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking}, 
-    author = {Corso, Gabriele and Stärk, Hannes and Jing, Bowen and Barzilay, Regina and Jaakkola, Tommi},
-    booktitle={International Conference on Learning Representations (ICLR)},
-    year={2023}
-}
-```
-
-If you use the latest version of our model, DiffDock-L, please also cite the following paper:
-
-```bibtex
-@inproceedings{corso2024discovery,
-    title={Deep Confident Steps to New Pockets: Strategies for Docking Generalization},
-    author={Corso, Gabriele and Deng, Arthur and Polizzi, Nicholas and Barzilay, Regina and Jaakkola, Tommi},
-    booktitle={International Conference on Learning Representations (ICLR)},
-    year={2024}
-}
-```
-
-## License <a name="license"></a>
-The code and model weights are released under MIT license. See the [LICENSE](LICENSE) file for details.
-
-Components of the code of the [spyrmsd](spyrmsd) package by Rocco Meli (also MIT license) were integrated in the repo.
-
-## Acknowledgements <a name="acknowledgements"></a>
-We sincerely thank:
-* Jacob Silterra for his help with the publishing and deployment of the code.
-* Arthur Deng, Nicholas Polizzi and Ben Fry for their critical contributions to part of the code in this repository. 
-* Wei Lu and Rachel Wu for pointing out some issues with the code.
