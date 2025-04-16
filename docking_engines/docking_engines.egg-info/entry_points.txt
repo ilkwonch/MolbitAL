@@ -1,0 +1,2 @@
+[console_scripts]
+docking = docking_engines.cli:main

@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: docking-engines
+Version: 0.1.0
+Summary: A collection of molecular docking engines
+Author: Ilkwon Cho
+Author-email: ilkwonc@andrew.cmu.edu
+License: MIT
+Requires-Python: >=3.10
