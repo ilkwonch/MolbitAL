@@ -179,9 +179,9 @@ When `--active` is set, MolbitAL writes the next‑cycle SMILES and fingerprints
 ## Acquisition Strategies<a id="acquisition-strategies"></a>
 | Name | Formula | Intuition |
 |------|---------|-----------|
-| **Greedy** | \( y\_\hat{ }(x) \) | Exploit top‑ranked predictions only |
-| **LCB** | \( y\_\hat{ }(x) - k\,\sigma(x) \) | Balance exploitation and exploration via user‑defined \(k\) |
-| **UNC** | \( \sigma(x) \) | Pure exploration: sample the most uncertain compounds |
+| **Greedy** | \( ŷ(x) \) | Exploit top‑ranked predictions  |
+| **LCB** | \( ŷ(x) - k*σ(x) \) | Balance exploitation and exploration via weight \(k\) |
+| **UNC** | \(  σ(x) \) | Pure exploration based sampling the most uncertain compounds |
 
 `--k` applies the weight of the uncertainty (default 2)
 
