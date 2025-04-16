@@ -25,10 +25,9 @@ MolbitAL is a modular active‑learning engine designed for ultra‑large virtua
 ---
 
 ## Features<a id="features"></a>
-* **Billion‑scale ready** – splits gigantic SMILES collections into tractable shards and streams them through GPU‑accelerated dockers.
+* **Billion‑scale ready** – splits  SMILES collections into tractable shards and streams them through GPU‑accelerated dockers.
 * **Modular architecture** – swap docking engines, ML models, or acquisition functions via a single JSON config.
 * **Stateful cycles** – resume an interrupted active‑learning campaign seamlessly (checkpointed by *project_name*).
-* **GPU awareness** – automatically throttles Uni‑Dock workloads with `--max_gpu_memory`.
 * **Optional isomer/tautomer enumeration** – integrates OpenEye OEToolkits when a license is available.
 
 ---
@@ -95,7 +94,7 @@ python prepare_receptor4.py -r 3me3_protein.pdb \
 ```
 
 ### Ligand Preparation<a id="ligand-preparation"></a>
-Split massive libraries into 1 000‑ligand shards (adjust `--target_num`).
+Split  libraries into 1 000‑ligand subsample (adjust `--target_num`).
 ```bash
 python utils/split_smiles.py --input total.smi \
                              --output smiles/ \
@@ -115,10 +114,10 @@ Optional OpenEye enumeration:
 ### Docking<a id="docking"></a>
 Generate an autobox grid:
 ```bash
-python utils/build_autobox.py --input aldh1_box.sdf \
-                              --output aldh1_box.txt
+python utils/build_autobox.py --input box.sdf \
+                              --output auto_box.txt
 ```
-Run docking (Uni‑Dock example):
+Run docking (unidock example):
 ```bash
 python phase_1/run_docking.py \
        --engine unidock \
@@ -131,7 +130,20 @@ python phase_1/run_docking.py \
        --active \
        --extra-args "--max_gpu_memory 2"
 ```
-Substitute `--engine` with `vina`, `vina-gpu`, `smina`, `qvina`, or `qvina-w` as needed.
+Run docking (Vina example):
+```bash
+python phase_1/run_docking.py \
+       --engine vina \
+       --receptor 3me3_protein.pdbqt \
+       --ligands-dir pkm2_train/train_pdbqt/ \
+       --config pkm2_box.txt \
+       --smiles-file pkm2_train/train_smiles.smi \
+       --output-dir pkm2_train/train_docking \
+       --results-csv scores.csv \
+       --active \
+```
+
+Substitute `--engine` with  `vina-gpu`, `smina`, `qvina`, or `qvina-w` as needed.
 
 ### Machine‑Learning Training<a id="machine-learning-training"></a>
 ```bash
