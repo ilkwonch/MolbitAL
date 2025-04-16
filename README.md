@@ -128,7 +128,7 @@ python phase_1/run_docking.py \
        --output-dir pkm2_train/train_docking \
        --results-csv scores.csv \
        --active \
-       --extra-args "--max_gpu_memory 2"
+       --extra-args --max_gpu_memory 2
 ```
 Run docking (Vina example):
 ```bash
@@ -140,7 +140,7 @@ python phase_1/run_docking.py \
        --smiles-file pkm2_train/train_smiles.smi \
        --output-dir pkm2_train/train_docking \
        --results-csv scores.csv \
-       --active \
+       --active 
 ```
 
 Substitute `--engine` with  `vina-gpu`, `smina`, `qvina`, or `qvina-w` as needed.
@@ -182,17 +182,17 @@ When `--active` is set, MolbitAL writes the next‑cycle SMILES and fingerprints
 | **LCB** | \( y\_\hat{ }(x) - k\,\sigma(x) \) | Balance exploitation and exploration via user‑defined \(k\) |
 | **UNC** | \( \sigma(x) \) | Pure exploration: sample the most uncertain compounds |
 
-`--k` tunes the conservativeness of LCB (default = 1.96 ≈ 95 % CI).
+`--k` applies the weight of the uncertainty (default 2)
 
 ---
 
 ## Datasets<a id="datasets"></a>
-MolbitAL ships with two ready‑to‑run benchmarks that mimic sparse hit discovery:
+MolbitAL ships with two ready‑to‑run benchmarks to mimik sparse hit scenarios:
 
-* **PKM2** – pyruvate kinase M2 inhibitors (≈ 3 M molecules)
-* **ALDH1** – aldehyde dehydrogenase 1 inhibitors (≈ 2 M molecules)
+* **PKM2** –	Pyruvate kinase muscle isoform 2 (Active: 546, Inactive: 244679)
+* **ALDH1** – 	Aldehyde dihydrogenase 1 (Active: 5363 , Inactive: 101874)
 
-Both subsets are distilled from the **LIT‑PCBA** open benchmark; see the original publication for curation details.
+Both subsets are distilled from the **LIT‑PCBA** open benchmark; see https://drugdesign.unistra.fr/LIT-PCBA/
 
 ---
 
@@ -201,21 +201,6 @@ MolbitAL is released under the MIT License (see [LICENSE](LICENSE)).
 
 ---
 
-## Citation<a id="citation"></a>
-If you use MolbitAL in your research, please cite:
-```bibtex
-@misc{Cho2025molbital,
-  author       = {Ilkwon Cho and Contributors},
-  title        = {MolbitAL — MOdular Ligand screening for Billion‑scale Iterative selection with Active Learning},
-  year         = {2025},
-  howpublished = {GitHub},
-  url          = {https://github.com/your‑org/molbital}
-}
-```
 
----
-
-## Acknowledgements<a id="acknowledgements"></a>
-MolbitAL builds upon the excellent work of the AutoDock, Uni‑Dock, Open‑Eye, RDKit, and XGBoost communities. Special thanks to collaborators in the Computational Chemistry group at Carnegie Mellon University for beta testing and feedback.
 
 
