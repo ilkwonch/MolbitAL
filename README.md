@@ -30,7 +30,7 @@ The framework plugs into Autodck-Vina with its variants (AutoDock‑Vina, Vina�
 * **Billion‑scale ready** – splits  SMILES collections into tractable shards and streams them through GPU‑accelerated dockers.
 * **Modular architecture** – swap docking engines, ML models, or acquisition functions via a single JSON config.
 * **Stateful cycles** – resume an interrupted active‑learning campaign seamlessly (checkpointed by *project_name*).
-* **Optional isomer/tautomer enumeration** – integrates OpenEye OEToolkits when a license is available.
+* **isomer/tautomer enumeration** – integrates OpenEye OEToolkits when a license is available.
 
 ---
 
@@ -148,7 +148,7 @@ python phase_1/run_docking.py \
 For in detail description and options for unidock, please see https://github.com/dptech-corp/Uni-Dock
 Substitute `--engine` with  `vina-gpu`, `smina`, `qvina`, or `qvina-w` as needed.
 
-### Machine‑Learning Training<a id="machine-learning-training"></a>
+### Machine‑Learning Training<a id="machine learning training"></a>
 ```bash
 python phase_2/train_ml.py \
        --input-csv pkm2_train/train_docking/scores.csv \
