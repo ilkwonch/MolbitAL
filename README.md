@@ -185,6 +185,10 @@ When `--active` is set, MolbitAL writes the next‑cycle SMILES and fingerprints
 
 `--k` applies the weight of the uncertainty (default 2)
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="./utils/assets/al_acquisition.png"></picture>
+
+
+
 ---
 
 ## Datasets<a id="datasets"></a>
