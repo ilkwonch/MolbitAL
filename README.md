@@ -48,8 +48,8 @@ The framework plugs into Autodck-Vina with its variants (AutoDockâ€‘Vina, Vinaâ€
 git clone https://github.com/isayeblab/molbital.git
 
 # 2. Create the conda environment
-conda env create --file environment.yml
-conda activate molbital
+mamba env create --file environment.yml
+mamba activate molbital
 
 # 3. Install MolbitAL and docking wrappers
 python setup.py install
