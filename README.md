@@ -1,6 +1,7 @@
 # MolbitAL - Modular Ligand screening for **B**illion‑scale **I**Terative selection with **A**ctive **L**earning
 
-MolbitAL is a modular active‑learning engine designed for ultra‑large virtual screening campaigns. It orchestrates end‑to‑end workflows—from ligand preparation and docking to machine‑learning‑guided acquisition—so you can triage billions of candidates efficiently on a single workstation or an HPC cluster. The framework plugs into popular docking back‑ends (AutoDock‑Vina, Vina‑GPU 2.1, QVina 2.1, QVina‑W, smina, Uni‑Dock) and currently supports Random‑Forest (RF) and XGBoost‑Distribution (XGB‑D) surrogate models for fast affinity ranking.  
+MolbitAL is a modular active‑learning engine designed for ultra‑large ligand virtual screening. It coordinates end‑to‑end workflows—from ligand preparation and molecular docking to machine learning with acquisition—scaling to billion compounds efficiently on locals or HPC cluster.  
+The framework plugs into Autodck-Vina with its variants (AutoDock‑Vina, Vina‑GPU 2.1, QVina 2.1, QVina‑W, smina, Uni‑Dock), and currently supports Random Forest (RF) and XGBoost‑Distribution (XGB‑D) surrogate models for fast affinity ranking.  
 (aimnet-x2d will be intergrated soon)
 
 ---
@@ -15,7 +16,7 @@ MolbitAL is a modular active‑learning engine designed for ultra‑large virtua
   - [Ligand Preparation](#ligand-preparation)
   - [Fingerprint Generation](#fingerprint-generation)
   - [Docking](#docking)
-  - [Machine‑Learning Training](#machine-learning-training)
+  - [Machine Learning](#machine-learning)
   - [Inference & Acquisition](#inference--acquisition)
 - [Acquisition Strategies](#acquisition-strategies)
 - [Datasets](#datasets)
