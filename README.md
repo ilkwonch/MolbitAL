@@ -53,6 +53,7 @@ conda activate molbital
 # 3. Install MolbitAL and docking wrappers
 python setup.py install
 ```
+> **Note:** For Autodock-Vina-GPU2.1, you need to manually assign OpenCL, boost, and CUDA toolkits. (For the detail, see https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1)
 
 ---
 
