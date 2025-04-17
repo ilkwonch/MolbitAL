@@ -1,4 +1,4 @@
-# MolbitAL - Modular Ligand screening for **B**illion‑scale **I**Terative selection with **A**ctive **L**earning
+# MolbitAL - MOdular Ligand screening for **B**illion‑scale **I**Terative selection with **A**ctive **L**earning
 
 MolbitAL is a modular active‑learning engine designed for ultra‑large ligand virtual screening. It coordinates end‑to‑end workflows—from ligand preparation and molecular docking to machine learning with acquisition—scaling to billion compounds efficiently on locals or HPC cluster.  
 The framework plugs into Autodck-Vina with its variants (AutoDock‑Vina, Vina‑GPU 2.1, QVina 2.1, QVina‑W, smina, Uni‑Dock), and currently supports Random Forest (RF) and XGBoost‑Distribution (XGB‑D) surrogate models for fast affinity ranking.  
@@ -27,10 +27,10 @@ The framework plugs into Autodck-Vina with its variants (AutoDock‑Vina, Vina�
 ---
 
 ## Features<a id="features"></a>
-* **Billion‑scale ready** – splits  SMILES collections into tractable shards and streams them through GPU‑accelerated dockers.
-* **Modular architecture** – swap docking engines, ML models, or acquisition functions via a single JSON config.
-* **Stateful cycles** – resume an interrupted active‑learning campaign seamlessly (checkpointed by *project_name*).
-* **isomer/tautomer enumeration** – integrates OpenEye OEToolkits when a license is available.
+* **High scalability** – splits SMILES collections into tractable samples and streams them through GPU‑accelerated docking engines.
+* **Modular architecture** – switch docking engines, ML models, or acquisition functions via a single JSON config.
+* **Stateful cycles** – resume an active‑learning cycles seamlessly (checkpointed by *project_name*).
+* **isomer/tautomer enumeration** – integrates OpenEye-Toolkits.
 
 ---
 
@@ -45,7 +45,6 @@ The framework plugs into Autodck-Vina with its variants (AutoDock‑Vina, Vina�
 ```bash
 # 1. Clone the repository
 git clone https://github.com/your‑org/molbital.git
-cd molbital
 
 # 2. Create the conda environment
 conda env create --file environment.yml
@@ -58,7 +57,7 @@ python setup.py install
 ---
 
 ## Quick Start<a id="quick-start"></a>
-When your SMILES chunks, fingerprints, and receptor grid are ready, launch an entire active‑learning loop with one line:
+When your SMILES directories, fingerprints, and receptor grid are ready, launch an entire active‑learning loop with one line:
 
 ```bash
 python run_al.py --config run_al.json
