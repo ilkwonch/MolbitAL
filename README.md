@@ -148,7 +148,7 @@ python phase_1/run_docking.py \
 For in detail description and options for unidock, please see https://github.com/dptech-corp/Uni-Dock
 Substitute `--engine` with  `vina-gpu`, `smina`, `qvina`, or `qvina-w` as needed.
 
-### Machine‑Learning Training<a id="machine learning training"></a>
+### Machine Learning<a id="Machine Learning"></a>
 ```bash
 python phase_2/train_ml.py \
        --input-csv pkm2_train/train_docking/scores.csv \
