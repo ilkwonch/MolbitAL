@@ -1,6 +1,7 @@
 # MolbitAL - Modular Ligand screening for **B**illion‑scale **I**Terative selection with **A**ctive **L**earning
 
-MolbitAL is a modular active‑learning engine designed for ultra‑large virtual screening campaigns. It orchestrates end‑to‑end workflows—from ligand preparation and docking to machine‑learning‑guided acquisition—so you can triage billions of candidates efficiently on a single workstation or an HPC cluster. The framework plugs into popular docking back‑ends (AutoDock‑Vina, Vina‑GPU 2.1, QVina 2.1, QVina‑W, smina, Uni‑Dock) and currently supports Random‑Forest (RF) and XGBoost‑Distribution (XGB‑D) surrogate models for fast affinity ranking. (aimnet-x2d will be intergrated soon)
+MolbitAL is a modular active‑learning engine designed for ultra‑large virtual screening campaigns. It orchestrates end‑to‑end workflows—from ligand preparation and docking to machine‑learning‑guided acquisition—so you can triage billions of candidates efficiently on a single workstation or an HPC cluster. The framework plugs into popular docking back‑ends (AutoDock‑Vina, Vina‑GPU 2.1, QVina 2.1, QVina‑W, smina, Uni‑Dock) and currently supports Random‑Forest (RF) and XGBoost‑Distribution (XGB‑D) surrogate models for fast affinity ranking. 
+(aimnet-x2d will be intergrated soon)
 
 ---
 
@@ -83,8 +84,8 @@ If `start_cycle` > 1 MolbitAL automatically resumes from the previous checkpo
 
 ---
 
-## Detailed Workflow<a id="detailed-workflow"></a>
-Below is the manual, step‑by‑step route.
+## Manual Workflow<a id="detailed-workflow"></a>
+Below is the manual, broken down into each phase.
 
 ### Protein Preparation<a id="protein-preparation"></a>
 ```bash
@@ -94,7 +95,7 @@ python prepare_receptor4.py -r 3me3_protein.pdb \
 ```
 
 ### Ligand Preparation<a id="ligand-preparation"></a>
-Split  libraries into 1 000‑ligand subsample (adjust `--target_num`).
+Split  libraries into 1 000‑ligand subsample (adjust `--target_num : Number of compounds by subsample`).
 ```bash
 python utils/split_smiles.py --input total.smi \
                              --output smiles/ \
@@ -192,10 +193,10 @@ When `--active` is set, MolbitAL writes the next‑cycle SMILES and fingerprints
 ---
 
 ## Datasets<a id="datasets"></a>
-MolbitAL ships with two ready‑to‑run benchmarks to mimik sparse hit scenarios:
+MolbitAL tests two benchmarks to mimic sparse hit scenarios:
 
-* **PKM2** –	Pyruvate kinase muscle isoform 2 (Active: 546, Inactive: 244679)
-* **ALDH1** – 	Aldehyde dihydrogenase 1 (Active: 5363 , Inactive: 101874)
+* **PKM2** –	Pyruvate kinase muscle isoform 2 (Active: 546, Inactive: 244679, 0.2% active)
+* **ALDH1** – 	Aldehyde dihydrogenase 1 (Active: 5363 , Inactive: 101874, 5% active)
 
 Both subsets are distilled from the **LIT‑PCBA** open benchmark; see https://drugdesign.unistra.fr/LIT-PCBA/
 
