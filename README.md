@@ -54,7 +54,6 @@ conda activate molbital
 # 3. Install MolbitAL and docking wrappers
 python setup.py install
 ```
-> **Tip:** Docking engines are treated as external executables. Follow their individual installation guides if they are not already in `PATH`.
 
 ---
 
@@ -96,7 +95,7 @@ python prepare_receptor4.py -r 3me3_protein.pdb \
 ```
 
 ### Ligand Preparation<a id="ligand-preparation"></a>
-Split  libraries into 1 000‑ligand subsample (adjust `--target_num : Number of compounds by subsample`).
+Split  libraries into N ligand subsample (adjust `--target_num :`).
 ```bash
 python utils/split_smiles.py --input total.smi \
                              --output smiles/ \
