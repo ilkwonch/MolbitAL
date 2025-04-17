@@ -177,6 +177,7 @@ When `--active` is set, MolbitAL writes the next‑cycle SMILES and fingerprints
 ---
 
 ## Acquisition Strategies<a id="acquisition-strategies"></a>
+
 | Name | Formula | Intuition |
 |------|---------|-----------|
 | **Greedy** | \( ŷ(x) \) | Exploit top‑ranked predictions  |
@@ -186,7 +187,7 @@ When `--active` is set, MolbitAL writes the next‑cycle SMILES and fingerprints
 `--k` applies the weight of the uncertainty (default 2)
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./utils/al_acquisition.png"></picture>
-
+![Acquisition strategies](./utils/al_acquisition.png)
 
 
 ---
